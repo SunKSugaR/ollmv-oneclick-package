@@ -101,6 +101,7 @@ FunASR:
 
 # ============== Text to Speech ==============
 TTS_ON: True
+# Text to speech model options: "meloTTS", "edgeTTS"
 TTS_MODEL: "meloTTS"
 
 # if on, whenever the LLM finish a sentence, the model will speak, instead of waiting for the full response
@@ -112,6 +113,11 @@ meloTTS:
   language: "EN" # ZH
   device: "auto" # You can set it manually to 'cpu' or 'cuda' or 'cuda:0' or 'mps'
   speed: 1.0
+
+edgeTTS:
+  # Check out doc at https://github.com/rany2/edge-tts
+  # Use `edge-tts --list-voices` to list all available voices
+  voice: "en-US-AvaMultilingualNeural" #"zh-CN-XiaoxiaoNeural" # "ja-JP-NanamiNeural"
 
 
 #  ============== Translate (to only change the language for TTS) ==============
